@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -9,8 +9,8 @@
     <packaging>jar</packaging>
     <name>JMeter Maven Example</name>
     <description>
-        Example how to integrate jmeter tests in a maven build and how to automatically 
-        generate graphs from the test results using the jmeter plugins CMDRunner. 
+        Example how to integrate jmeter tests in a maven build and how to automatically
+        generate graphs from the test results using the jmeter plugins CMDRunner.
     </description>
 
     <properties>
@@ -37,7 +37,8 @@
         <profile>
             <id>jenkins</id>
             <properties>
-                <performancetest.webservice.host>tomcat7-example-webapp.mlex.cloudbees.net</performancetest.webservice.host>
+                <performancetest.webservice.host>tomcat7-example-webapp.mlex.cloudbees.net
+                </performancetest.webservice.host>
                 <performancetest.webservice.port>80</performancetest.webservice.port>
                 <performancetest.threadCount>5</performancetest.threadCount>
                 <performancetest.loopCount>5</performancetest.loopCount>
@@ -137,7 +138,7 @@
                                 <groupId>org.apache.hbase</groupId>
                                 <artifactId>hbase</artifactId>
                             </exclusion>
-                            
+
                             <!--
                                 These dependencies would override direct JMeter dependencies,
                                 which results in version conflicts (e.g. NoSuchMethodError on jmeter startup
@@ -225,21 +226,27 @@
                             <pluginType>ThreadsStateOverTime</pluginType>
                             <width>800</width>
                             <height>600</height>
-                            <outputFile>${project.build.directory}/jmeter/results/SimpleWebservicePerformanceTest-ThreadsStateOverTime.png</outputFile>
+                            <outputFile>
+                                ${project.build.directory}/jmeter/results/SimpleWebservicePerformanceTest-ThreadsStateOverTime.png
+                            </outputFile>
                         </graph>
                         <graph>
                             <pluginType>ResponseTimesOverTime</pluginType>
                             <width>800</width>
                             <height>600</height>
-                            <outputFile>${project.build.directory}/jmeter/results/SimpleWebservicePerformanceTest-ResponseTimesOverTime.png</outputFile>
+                            <outputFile>
+                                ${project.build.directory}/jmeter/results/SimpleWebservicePerformanceTest-ResponseTimesOverTime.png
+                            </outputFile>
                         </graph>
                         <graph>
                             <pluginType>TransactionsPerSecond</pluginType>
                             <width>800</width>
                             <height>600</height>
-                            <outputFile>${project.build.directory}/jmeter/results/SimpleWebservicePerformanceTest-TransactionsPerSecond.png</outputFile>
+                            <outputFile>
+                                ${project.build.directory}/jmeter/results/SimpleWebservicePerformanceTest-TransactionsPerSecond.png
+                            </outputFile>
                         </graph>
-                   </graphs>
+                    </graphs>
                 </configuration>
             </plugin>
         </plugins>
