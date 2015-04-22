@@ -1,3 +1,5 @@
+This project is taken from another project. I have to make changes for presonal changes.
+
 # JMeter Maven Example
 Example how to integrate jmeter tests in a maven build and how to automatically generate graphs from the test results using the jmeter plugins CMDRunner. 
 
